@@ -10,7 +10,7 @@ pipeline {
 	}
 	}
 
-    stages {
+    
 	stage ('build') {
 		steps {
 			script {		
@@ -20,7 +20,6 @@ pipeline {
 	}
 	}
 		
-	stages {
 	stage ('Junit test') {
 		steps {
 			script {		
@@ -50,15 +49,11 @@ pipeline {
                 mail to: 'bojanapuhemant8@gmail.com',
                      subject: "Build fail + Condition Pass",
                      body: "Build got success check status @ ${env.BUILD_URL}"
-                 
-            }
-        }
-    }
-                            
-        }
-    
-		
-	    }
-
+		   } 
+		}
 	}
-
+		  
+    }
+		   
+	
+		   
